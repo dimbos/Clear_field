@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Очисти поле</title>
+</head>
+<body>
+	<input type = "checkbox" id = "b11" />
+	<input type = "checkbox" id = "b12" />
+	<input type = "checkbox" id = "b13" />
+	<input type = "checkbox" id = "b14" />
+	<input type = "checkbox" id = "b15" />
+	<br>
+	<input type = "checkbox" id = "b21" />
+	<input type = "checkbox" id = "b22" />
+	<input type = "checkbox" id = "b23" />
+	<input type = "checkbox" id = "b24" />
+	<input type = "checkbox" id = "b25" />
+	<br>
+	<input type = "checkbox" id = "b31" />
+	<input type = "checkbox" id = "b32" />
+	<input type = "checkbox" id = "b33" />
+	<input type = "checkbox" id = "b34" />
+	<input type = "checkbox" id = "b35" />
+	<br>
+	<input type = "checkbox" id = "b41" />
+	<input type = "checkbox" id = "b42" />
+	<input type = "checkbox" id = "b43" />
+	<input type = "checkbox" id = "b44" />
+	<input type = "checkbox" id = "b45" />
+	<br>
+	<input type = "checkbox" id = "b51" />
+	<input type = "checkbox" id = "b52" />
+	<input type = "checkbox" id = "b53" />
+	<input type = "checkbox" id = "b54" />
+	<input type = "checkbox" id = "b55" />
+	<br>
+	<input type="submit" value = "level 1" onclick="level1()" />
+	<script>
+		function did(id){
+		return document.getElementById(id);
+	}
+
+	function clearAll(){
+		for(let x = 1; x <= 5; x++)
+			for(let y = 1; y <= 5; y++)
+				did("b" + x + y).checked = false;
+	}
+
+	function level1(){
+		clearAll();
+		did("b32").checked = true;
+		did("b34").checked = true;
+	}
+
+
+
+	level1();
+	</script>
+</body>
+</html>
